@@ -57,10 +57,10 @@
 		console.log('Device found: ' + device.name + ' rssi: ' + device.rssi)
 
 		// THIS IS WHERE YOU EDIT THE NAME OF THE BLE DEVICE TO CONNECT TO!
-		var myDeviceName = 'estimote'
+		var myDeviceName = 'LED' //'SensorTag'
 
 		// Connect if name matches.
-		if (device.name == myDeviceName)
+		if (-1 != device.name.indexOf(myDeviceName))
 		{
 			evothings.easyble.stopScan()
 			console.log('Advertisement data')
@@ -129,7 +129,10 @@
 	}
 
 	// Run init function when the mobile device is ready.
-	document.addEventListener('deviceready', init, false)
+	document.addEventListener(
+		'deviceready', 
+		function() { evothings.scriptsLoaded(init) }, 
+		false)
 	</script>
 </body>
 </html>
