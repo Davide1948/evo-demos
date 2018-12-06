@@ -2,10 +2,8 @@
 // Evothings AB, 2014
 
 // Include BLE files.
-#include <SPI.h>
-#include <boards.h>
-#include <RBL_nRF8001.h>
-#include <services.h>
+#include <OneWire.h>
+#include "SimpleBLE.h"
 
 // This function is called only once, at reset.
 void setup()
