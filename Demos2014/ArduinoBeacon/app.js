@@ -6,9 +6,7 @@ var app = {}
 // Mapping of beacon names to page ids.
 app.beaconPages =
 {
-	'BEACON1':'page-feet',
-	'BEACON2':'page-shoulders',
-	'BEACON3':'page-face'
+	'BEACON1':'page-DiagnosticaperImmagini'
 }
 
 // Signal strength of beacons.
